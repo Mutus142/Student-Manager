@@ -6,7 +6,8 @@ while True:
     1 - Cadastrar Aluno
     2 - Adicionar Nota
     3 - Ver Boletim
-    4 - Sair
+    4 - Lista de Alunos
+    5 - Sair
     """)
 
     try:
@@ -26,5 +27,8 @@ while True:
         ver_boletim()
 
     elif escolha == 4:
+        lista_alunos()
+
+    elif escolha == 5:
         print("Saindo...")
         break

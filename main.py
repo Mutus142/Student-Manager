@@ -17,14 +17,17 @@ def cadastrar_aluno():
 
 
 def adicionar_nota():
+
     nome = input("Qual o nome do aluno para adicionar a nota? ")
 
     if nome in alunos:
-
         nota = int(input("Qual a nota? "))
 
-        alunos[nome]["notas"].append(nota)
+        if nota > 10:
+            print("Nota inválida!")
+            return
 
+        alunos[nome]["notas"].append(nota)
         print("Nota adicionada!")
 
     else:
@@ -85,4 +88,13 @@ def lista_alunos():
         print("Turma:", turma)
         print("Média:", f"{media:.2f}")
         print("Situação:", resultado)
+
+def remover_aluno():
+    nome = input("Qual o nome do aluno? ")
+
+    if nome in alunos:
+        del alunos[nome]
+        print("Removendo aluno...")
         
+    else:
+        print("Aluno não encontrado!")

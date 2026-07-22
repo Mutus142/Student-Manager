@@ -7,7 +7,8 @@ while True:
     2 - Adicionar Nota
     3 - Ver Boletim
     4 - Lista de Alunos
-    5 - Sair
+    5 - Remover Aluno
+    6 - Sair
     """)
 
     try:
@@ -30,5 +31,8 @@ while True:
         lista_alunos()
 
     elif escolha == 5:
+        remover_aluno()
+
+    elif escolha == 6:
         print("Saindo...")
         break

@@ -8,7 +8,8 @@ while True:
     3 - Ver Boletim
     4 - Lista de Alunos
     5 - Remover Aluno
-    6 - Sair
+    6 - Procurar Turma
+    7 - Sair
     """)
 
     try:
@@ -34,5 +35,8 @@ while True:
         remover_aluno()
 
     elif escolha == 6:
+        procurar_turma()
+
+    elif escolha == 7:
         print("Saindo...")
         break

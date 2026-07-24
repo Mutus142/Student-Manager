@@ -56,5 +56,24 @@ def remover_aluno():
     else:
         print("Nome invalido!")
 
-# def alterar_nota():
-    
+def alterar_nota():
+
+    nome = input("Qual o nome do aluno que deseja alterar? ")
+    nota = int(input("Qual a nota que deseja alterar? "))
+
+    if nome in alunos:
+
+        notas = alunos[nome]["notas"]
+
+        for i in range(len(notas)):
+
+            if notas[i] == nota:
+
+                nota_nova = int(input("Qual a nota nova? "))
+                notas[i] = nota_nova
+
+                print("Nota alterada com sucesso!")
+
+    else:
+        print("Aluno não encontrado!")
+

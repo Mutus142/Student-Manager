@@ -89,15 +89,6 @@ def lista_alunos():
         print("Média:", f"{media:.2f}")
         print("Situação:", resultado)
 
-def remover_aluno():
-    nome = input("Qual o nome do aluno? ")
-
-    if nome in alunos:
-        del alunos[nome]
-        print("Removendo aluno...")
-        
-    else:
-        print("Aluno não encontrado!")
 
 def procurar_turma():
 

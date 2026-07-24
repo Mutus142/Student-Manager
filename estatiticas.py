@@ -37,7 +37,7 @@ def estatisticas_menu():
 
 def alunos_aprovados():
 
-    contador = 0
+    contador = 0:
 
     for nome in alunos:
 
@@ -59,3 +59,46 @@ def alunos_aprovados():
 
     else:
         print(f"\nTotal de alunos aprovados: {contador}")
+
+def alunos_reprovados():
+
+    contador = 0
+
+    for nome in alunos:
+
+        notas = alunos[nome]["notas"]
+
+        if len(notas) == 0:
+            print("Nenhum aluno encontrado!")
+
+        media = sum(notas) / len(notas)
+
+        if media < 6:
+            print("Nome: ", nome)
+            print("Media: ", media)
+
+        contador += 1
+
+    if contador == 0:
+        print("Nenhum aluno encontrado!")
+
+    else:
+        print(contador, "Alunos encontrados!")
+
+def total_alunos():
+
+    contador = 0:
+
+    for nome in alunos:
+
+        if len(notas) == 0:
+            print("Nenhum aluno encontrado!")
+
+        else:
+            contador += 1
+
+    if contador == 0:
+        print("Nenhum aluno cadastrado!")
+
+    else:
+        print("O total de alunos é: ", contador)

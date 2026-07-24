@@ -1,4 +1,5 @@
 from main import *
+from estatiticas import *
 
 while True:
 
@@ -9,7 +10,8 @@ while True:
     4 - Lista de Alunos
     5 - Remover Aluno
     6 - Procurar Turma
-    7 - Sair
+    7 - Estatisticas Gerais
+    8 - Sair
     """)
 
     try:
@@ -38,5 +40,8 @@ while True:
         procurar_turma()
 
     elif escolha == 7:
+        estatisticas_menu()
+
+    elif escolha == 8:
         print("Saindo...")
         break

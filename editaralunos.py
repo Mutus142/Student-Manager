@@ -77,3 +77,42 @@ def alterar_nota():
     else:
         print("Aluno não encontrado!")
 
+
+def alterar_nome():
+
+    nome = input("Qual o nome do aluno que voce deseja alterar? ")
+
+    if nome in alunos:
+
+        turma_antiga = alunos[nome]["turma"]
+        nota_antiga = alunos[nome]["notas"]
+
+        nome_novo = input("Qual o nome novo? ")
+
+        alunos[nome_novo] = {
+            "turma": turma_antiga,
+            "notas": nota_antiga
+        }
+
+        del alunos[nome]
+        print("Alterando nome...")
+        print("Nome alterado!")
+
+    else:
+        print("Nenhum aluno encontrado!")
+
+
+def alterar_turma():
+
+    nome = input("Qual o nome do aluno? ")
+
+    if nome in alunos:
+
+        turma_nova = int(input("Qual a turma nova? "))
+
+        alunos[nome]["turma"] = turma_nova
+
+        print("Turma alterada com sucesso!")
+
+    else:
+        print("Aluno não encontrado!")

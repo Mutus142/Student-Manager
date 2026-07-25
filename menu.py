@@ -1,6 +1,7 @@
 from main import *
 from estatiticas import *
 from editaralunos import *
+from turmas import *
 
 while True:
 
@@ -10,7 +11,7 @@ while True:
     3 - Ver Boletim
     4 - Lista de Alunos
     5 - Editar Alunos
-    6 - Procurar Turma
+    6 - Analisar Turmas
     7 - Estatisticas Gerais
     8 - Sair
     """)
@@ -38,7 +39,7 @@ while True:
         editar_alunos()
 
     elif escolha == 6:
-        procurar_turma()
+        ver_turmas()
 
     elif escolha == 7:
         estatisticas_menu()

@@ -88,30 +88,3 @@ def lista_alunos():
         print("Turma:", turma)
         print("Média:", f"{media:.2f}")
         print("Situação:", resultado)
-
-
-def procurar_turma():
-
-    turma_procurada = input("Qual a turma deseja procurar? ")
-    contador = 0
-    print(f"\n===== TURMA {turma_procurada} =====\n")
-
-
-    for nome in alunos:
-
-        turma_aluno = alunos[nome]["turma"]
-
-        if turma_aluno == turma_procurada:
-
-            print(f"Nome: {nome}")
-            print(f"Turma: {turma_aluno}")
-            print("-----------------------")
-
-            contador += 1
-
-
-    if contador == 0:
-        print("Nenhum aluno encontrado nessa turma!")
-
-    else:
-        print(f"\n{contador} aluno(s) encontrado(s)!")
